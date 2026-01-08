@@ -54,7 +54,7 @@
 
 ### 3.3 查询缓存，物化视图
   - cube.js 开源的就 支持查询缓存，物化视图。提供多种刷新策略。
-    ![描述](pic/p1.png) 如图通过配置预聚合 可以在后台自动刷新物化视图。
+    ![描述](pic/p1.png) 如图通过配置预聚合 可以在后台自动刷新物化视图。自动创建一张amount_by_created 表 。
   -   定时刷新 every: '1 hour'
   -   增量刷新：设置 partitionGranularity: 'day'/'hour' + refreshRange + incremental 模式（最常用、最省资源）
   -   近实时：every: '5 minute' + 增量分区 
